@@ -1,0 +1,16 @@
+{
+  "Players": [],
+  "RoomSize": 0,
+  "RoomName": "",
+  "NormalGame": true,
+  "RoomID" : -1,
+  "Dices": [1,1],
+  "RolledDice": false,
+  "MovesLeft": 0,
+  "Turn": 0,
+  "closed": false,
+  "CommunityCards": [],
+  "HiddenCards": [],
+  "GameFinished": false,
+  "Winner": ""
+}
