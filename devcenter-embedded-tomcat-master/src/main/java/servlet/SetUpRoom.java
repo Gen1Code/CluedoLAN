@@ -66,7 +66,7 @@ public class SetUpRoom {
                 ((JSONArray)((JSONObject)((JSONArray)Room.get("Players")).get(i)).get("cards")).add(Card);
             }
         }
-        //Set Community Cards
+        //Set Community Cards     i++???? TDL
         for(int i =0;i< NStack.deckSize();){
             int Card = NStack.giveCard();
             ((JSONArray)Room.get("CommunityCards")).add(Card);
@@ -80,22 +80,23 @@ public class SetUpRoom {
         Colours.add("#FFA500");Colours.add("#FFFFFF"); //Orange,Black
 
         ArrayList<String> StartPos = new ArrayList<>();
-        StartPos.add(",");StartPos.add(",");
-        StartPos.add(",");StartPos.add(",");
-        StartPos.add(",");StartPos.add(",");//Add correct starting position Row,Column
-        StartPos.add(",");StartPos.add(",");
+        StartPos.add("0,16,0");StartPos.add("24,9,0");
+        StartPos.add("18,0,0");StartPos.add("24,14,0");
+        StartPos.add("7,23,0");StartPos.add("5,0,0");//Add correct starting position Row,Column
+        StartPos.add("2,11,1");StartPos.add("11,6,1");
 
         for(int i = 0;i<RoomSize;i++){
             int Index = rnd.nextInt(colourLimit); //Index,colourLimit also serve to get starting position
             String colour = Colours.get(Index);
-            String[] rowCol = StartPos.get(Index).split(",");
+            String[] rowColFlo = StartPos.get(Index).split(",");
             Colours.remove(Index);
             StartPos.remove(Index);
             colourLimit = colourLimit - 1;
-            /*  STARTING POSITION  ,, , ,,
             ((JSONObject)((JSONArray)Room.get("Players")).get(i)).put("colour",colour);
-            ((JSONObject)((JSONArray)Room.get("Players")).get(i)).put("row",rowCol[0]);
-            ((JSONObject)((JSONArray)Room.get("Players")).get(i)).put("column",rowCol[1]);*/
+            ((JSONObject)((JSONArray)Room.get("Players")).get(i)).put("row",rowColFlo[0]);
+            ((JSONObject)((JSONArray)Room.get("Players")).get(i)).put("column",rowColFlo[1]);
+            ((JSONObject)((JSONArray)Room.get("Players")).get(i)).put("floor",rowColFlo[2]);
+
         }
 
         //Random Turn (index value in Players Array)
