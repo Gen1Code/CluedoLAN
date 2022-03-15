@@ -1,4 +1,4 @@
-Don't copy this Project, no selling or any kind of illegal stuff.  
+Don't copy this Project and pass it off as your own, no selling or any kind of illegal stuff.  
 Some code has been taken from other people including Stack Overflow and Github, 99.9% of it has been adapted to fit my needs.  
 Card Pictures are either taken from google images, most of which have Creative Commons Liciense or generated for personal use, the main board image is taken from someone else (sorry).  
 The code for this project was more about showing complexity and being creative than about consistent concise code, most of it is commented with easy stuff being left uncommented, sorry about that.  
