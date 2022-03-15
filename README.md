@@ -10,7 +10,7 @@ For other computers to connect, open command prompt and type in 'ipconfig /all' 
 other computers connect to that host ip:8080 as the url for most web browsers, some are special, and dont use old internet explorer please, some JS stuff doesnt work.
 One computer can have several accounts open at once, just use different web browsers, e.g. Chrome and Microsoft Edge, might want to have monitiors seperating browsers though if you dont wanna see each others cards.
 
-How to Play\n
+How to Play
 Space bar - Roll the Dice
 S - Use secret passageway
 Arrow Keys - Move Around
