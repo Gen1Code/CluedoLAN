@@ -16,9 +16,15 @@ How to Play
 Space bar - Roll the Dice  
 S - Use Secret Passageway  
 Arrow Keys - Move Around
+Top Cards - Community Cards, every player can see these  
+Bottom Cards - Player Cards, no one else can see these  
+Coloured circles with arrow - represent who is currently & going to play   
+Tick Card - maybe try clicking somewhere ![image](https://user-images.githubusercontent.com/72555054/158430902-b5a5c6df-d887-4527-ad4f-d52da491f862.png)
+Action List (the blob of text) - well... read it  
 
-There is an original variation of Cluedo have fun.  
-If you can beat 6 Bots without cheating you're insane.
+
+There is an original variation of Cluedo which has a 1st Floor, have fun.  
+If you can beat 6 Bots without cheating you're insane (I swear they don't cheat, they're just logic beasts).  
 ![image](https://user-images.githubusercontent.com/72555054/158430243-8aab2409-1c14-48ad-9d42-6fefa7525f1b.png)
 
 
