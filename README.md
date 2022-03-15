@@ -3,7 +3,7 @@ Some code has been taken from other people including Stack Overflow and Github, 
 Card Pictures are either taken from google images, most of which have Creative Commons Liciense or generated for personal use, the main board image is taken from someone else (sorry).  
 The code for this project was more about showing complexity and being creative than about consistent concise code, most of it is commented with easy stuff being left uncommented, sorry about that.  
 
-This program allows people to play Cluedo across a LAN, one computer runs this program and it is available across the LAN ~~unless Firewalls~~, hosted on port 8080,
+This program allows people to play Cluedo across a LAN, one computer runs this program (use IntelliJ), I have no clue how to make it work for other IDEs) and it is available across the LAN ~~unless Firewalls~~, hosted on port 8080,
 For hosting computer '127.0.0.1:8080' connects to the server.  
 For other computers to connect, open command prompt and type in 'ipconfig /all' in the hosting computer find the correct ipv4 address
 (it should be under either Wireless LAN adapter Wifi or Ethernet "" ""),
@@ -12,7 +12,7 @@ One computer can have several accounts open at once, just use different web brow
 
 How to Play   
 Space bar - Roll the Dice  
-S - Use secret passageway  
+S - Use Secret Passageway  
 Arrow Keys - Move Around
 
 There is an original variation of Cluedo have fun.  
@@ -24,3 +24,12 @@ Most refreshes of pages won't disturb the play, but not fully tested
 Any bugs found then please notify me :)     
 I'd like to fix them myself   
 (work out how find me yourself ;)
+
+
+Possible Project Not Running Fixes:  
+Mark sqlite-jdbc & json-simple as Libraries  
+Check dependencies (Maven problems sometimes)  
+Check Program Language level should be 16  
+Use OpenJDK 16  
+
+![image](https://user-images.githubusercontent.com/72555054/158429068-c2e91f70-748d-49a4-97c8-82458ea35b72.png)
