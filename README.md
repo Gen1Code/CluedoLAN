@@ -10,6 +10,8 @@ For other computers to connect, open command prompt and type in 'ipconfig /all' 
 Other computers enter ip:8080 as the url (for most web browsers, some are special) and dont use old internet explorer please, some JS stuff doesnt work.  
 One computer can have several accounts open at once, just use different web browsers, e.g. Chrome and Microsoft Edge, might want to have monitiors seperating browsers though if you dont wanna see each others cards.
 
+![image](https://user-images.githubusercontent.com/72555054/158430117-794fefd5-ebcf-4dda-8e1b-a05112af2531.png)
+
 How to Play   
 Space bar - Roll the Dice  
 S - Use Secret Passageway  
@@ -17,6 +19,8 @@ Arrow Keys - Move Around
 
 There is an original variation of Cluedo have fun.  
 If you can beat 6 Bots without cheating you're insane.
+![image](https://user-images.githubusercontent.com/72555054/158430243-8aab2409-1c14-48ad-9d42-6fefa7525f1b.png)
+
 
 Passwords are hashed so no worries about that.
 
