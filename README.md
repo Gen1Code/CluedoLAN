@@ -19,7 +19,7 @@ Arrow Keys - Move Around
 Top Cards - Community Cards, every player can see these  
 Bottom Cards - Player Cards, no one else can see these  
 Coloured circles with arrow - represent who is currently & going to play   
-Tick Card - maybe try clicking somewhere ![image](https://user-images.githubusercontent.com/72555054/158430902-b5a5c6df-d887-4527-ad4f-d52da491f862.png)
+Tick Card - maybe try clicking somewhere
 Action List (the blob of text) - well... read it  
 
 
