@@ -1,16 +1,20 @@
+<%@ page import="Database.DBManager" %>
+<%@ page import="java.sql.SQLException" %>
 <html>
-<head>
 <%
-    String nameS = (String) session.getAttribute("name");
+    DBManager testObject = new DBManager("Cluedo.db");
+    Integer ID = (Integer) session.getAttribute("AID");
     try{
-        if(nameS.equals("")){
+        //Reject invalid ID
+        //Only allow current database marked session to be logged in, blocks multiple sessions
+        if(ID == null || ID == -1 || !request.getSession().getId().equals(testObject.getSessionID(ID))){
             response.sendRedirect("index.jsp");
         }
-    }catch(NullPointerException e){
+    }catch(NullPointerException | SQLException e){
         response.sendRedirect("index.jsp");
     }
 %>
-
+<head>
 <script>
     function changeFormType(){
         if(document.getElementById("ChosenType").value == "Big Game"){
@@ -59,23 +63,44 @@
             document.getElementById("size6").style.display = "block";
         }
     }
+
+    var re1 = new RegExp("^[A-Z0-9a-z ]{2,12}$");
+
+    function checkInput(){
+        var n = document.getElementById("GameName").value;
+        var t = document.getElementById("ChosenType").value;
+        var s = document.getElementById("ChosenSize").value
+        var b = document.getElementById("BotNumber").value;
+        if(!re1.test(n)){
+            alert("Name must be between 2 and 12 characters and only contain alphanumeric characters");
+            return false;
+        }else if((t == "Big Game" && (s<5 || s>7)) || (t == "Normal Game" && (s<3 || s>5))){
+            alert("Your Room Size is incompatible with the Type of Game");
+            return false;
+        }else if(b+1 > s){
+            alert("You have too many Bots for the Game Size you chose");
+            return false;
+        }else{
+            return true;
+        }
+    }
 </script>
 </head>
 <body onload="changeFormType();changeFormSize();">
 <a href="Home.jsp">Go Back</a>
-<a href="LogoutServlet">Log Out</a>
-<form method="post" action="CreateRoomServlet">
-    <p>Room Name</p>
-    <input type="text" pattern="[A-Z0-9a-z]+" minlength="2" maxlength="12" placeholder="Name" name="RoomName" required>
+<button onclick="window.location.href='LogoutServlet'">Log Out</button>
+<form method="post" action="CreateRoomServlet" onsubmit="return checkInput();">
+    <p>Game Name</p>
+    <input type="text" placeholder="Name" name="GameName" id="GameName" required>
 
     <p>Type of Game</p>
-    <select name="RoomType" id="ChosenType" onchange="changeFormType()">
+    <select name="GameType" id="ChosenType" onchange="changeFormType()">
         <option selected>Normal Game</option>
         <option>Big Game</option>
     </select>
 
-    <p>Room Size</p>
-    <select name="RoomSize" id="ChosenSize" onchange="changeFormSize()">
+    <p>Game Size</p>
+    <select name="GameSize" id="ChosenSize" onchange="changeFormSize()">
         <option id="NGOption">3</option>
         <option id="NGOption2">4</option>
         <option selected>5</option>
@@ -93,7 +118,7 @@
         <option id="size5">5</option>
         <option id="size6">6</option>
     </select>
-    <input type="submit" value="Create Room">
+    <input type="submit" value="Create Game">
 </form>
 
 </body>
