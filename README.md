@@ -15,7 +15,7 @@ One computer can have several accounts open at once, just use different web brow
 How to Play   
 Space bar - Roll the Dice  
 S - Use Secret Passageway  
-Arrow Keys - Move Around
+Arrow Keys - Move Around  
 Top Cards - Community Cards, every player can see these  
 Bottom Cards - Player Cards, no one else can see these  
 Coloured circles with arrow - represent who is currently & going to play   
