@@ -108,7 +108,7 @@ public class Bot {
 
     //Returns true when Bot has figured out all the Cards else returns false
     private boolean think() throws SQLException, ParseException, InterruptedException {
-        //States one per Cell
+        //States, one per Cell
         // "X" - Confirmed not in their Hand
         // " " - Not Discovered
         // "L" - Confirmed in their Hand
@@ -255,6 +255,7 @@ public class Bot {
             return false;
         }
     }
+
 
     private void checkForHiddenCards(
             ArrayList<ArrayList<String>> SuspectMemory, ArrayList<ArrayList<String>> WeaponMemory, ArrayList<ArrayList<String>> RoomMemory

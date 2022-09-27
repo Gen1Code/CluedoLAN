@@ -668,7 +668,6 @@ public class DBManager {
         return AID;
     }
 
-    //BUG FIX TDL 7 player 6 bots, player not getting 1st Turn
     //Setup A game, called by last player joining a Game
     public void setUpGame(int GID) throws SQLException, ParseException, InterruptedException {
         //Set Colours list
@@ -1766,7 +1765,7 @@ public class DBManager {
                     ChangePoints.add(tempChangePoints);
                     increaseAccountGameEndings(GameOrder.get(i),"Wins");
                 }else{
-                    tempChangePoints = (100/(z+7)) + PlayingGameReward;
+                    tempChangePoints = (100/(z+7)) - PlayingGameReward;
                     if(CurrentPoints < tempChangePoints){
                         ChangePoints.add(-1*CurrentPoints);
                     }else{
@@ -1776,11 +1775,13 @@ public class DBManager {
                 }
             }else{
                 if(GameOrder.get(i)==GuesserAID){
-                    tempChangePoints = PlayingGameReward - (10 * z);
+                    tempChangePoints = (10 * z) - PlayingGameReward;
+                    System.out.println(CurrentPoints);
+                    System.out.println(tempChangePoints);
                     if(CurrentPoints < tempChangePoints){
                         ChangePoints.add(-1*CurrentPoints);
                     }else{
-                        ChangePoints.add(tempChangePoints);
+                        ChangePoints.add(-1*tempChangePoints);
                     }
                     increaseAccountGameEndings(GameOrder.get(i),"WrongGuesses");
                 }else{

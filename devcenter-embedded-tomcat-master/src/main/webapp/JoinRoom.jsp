@@ -29,7 +29,7 @@
 
         form{
             display: inline-block;
-            left:430px;
+            left:500px;
             position: absolute;
             margin-top: 10px;
         }

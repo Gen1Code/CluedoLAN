@@ -1,4 +1,4 @@
-/*
+
 insert into Game("GameName") values("Game 1");
 insert into Accounts("PlayerName") values("Player 1");
 insert into Participation("AID","GID") values(1,1),(2,1),(6,1);
@@ -17,7 +17,7 @@ insert into Location("TID","Room","Location","Step") values
 (4,0,"[1,30,0]",1),
 (4,0,"[1,31,0]",2),
 (5,0,"[6,3,0]",0),
-(5,0,"[5,3,0]",1);*/
+(5,0,"[5,3,0]",1);
 
 
 --Returns every MaxTurn for every account in the game
@@ -26,7 +26,7 @@ insert into Location("TID","Room","Location","Step") values
 --ReturnsLocation of highest TurnNumber and of that the highest Step from each PID
 
 
-/*
+
 select AID, Location, Colour from (
         select AID, x.TID, Location, max(Step), Colour from Location x inner join (
                 select AID, TID, max(TurnNumber), Colour 
@@ -52,8 +52,8 @@ select AID, Room, Location, Colour, PlayerName from (
 select TID, AID,Roll1,Roll2 from Turn join Participation on (Turn.PID=Participation.PID) where TurnNumber=(
         select max(TurnNumber) as MaxTurn from Turn join Participation on (Turn.PID=Participation.PID)
         where Participation.GID=1
-);*/
-/*
+);
+
 insert into PlayerCards("PID","CID") values 
 (1,1),
 (1,4),
@@ -73,8 +73,8 @@ insert into HiddenCards("GID","CID") values
 
 insert into CommunityCards("GID","CID") values 
 (1,12);
-*/
-/*
+
+
 delete from Location where TID in (select Location.TID from Participation join Turn on (Participation.PID=Turn.PID) join Location on (Turn.TID=Location.TID) where GID=1);
 delete from Question where TID in (select TID from Participation join Turn on (Participation.PID=Turn.PID) where GID=1);
 delete from PlayerCards where PID in (select PlayerCards.PID,CID from Participation join PlayerCards on (Participation.PID=PlayerCards.PID) where GID=1); 
@@ -82,10 +82,10 @@ delete from CommunityCards where GID =1;
 delete from Hiddencards where GID =1; 
 delete from Turn where TID in (select TID from Participation join Turn on (Participation.PID=Turn.PID) where GID=1);
 delete from Participation where GID=1;
-delete from Game where GID=1;*/
+delete from Game where GID=1;
         
 
-/*
+
 delete from Location where TID in (select Location.TID from Participation join Turn on (Participation.PID=Turn.PID) join Location on (Turn.TID=Location.TID) where GID=16);
 delete from Question where TID in (select TID from Participation join Turn on (Participation.PID=Turn.PID) where GID=16);
 delete from PlayerCards where PID in (select PlayerCards.PID from Participation join PlayerCards on (Participation.PID=PlayerCards.PID) where GID=16);
@@ -93,9 +93,9 @@ delete from CommunityCards where GID =16;
 delete from HiddenCards where GID =16;
 delete from Turn where TID in (select TID from Participation join Turn on (Participation.PID=Turn.PID) where GID=16);
 delete from Participation where GID=16;
-delete from Game where GID=16;*/
+delete from Game where GID=16;
 
-/*
+
 select Participation.AID as AnswererAID, CardSuspect, CardWeapon, CardRoom, Response from Question 
 join Participation on (Participation.PID=Question.Answerer) 
 where QID in (
@@ -110,8 +110,7 @@ join Turn on (Turn.TID=Question.TID)
 where Answerer!=334 and Turn.PID!=334 and Response != 0 and Participation.GID=63;
 
 update Accounts set Points = 300, GamesPlayed=0, WrongGuesses=0, Losses=0, Wins=0; 
-*/
-/*
+
 select count(case when AID < 5 then 1 end) as BotNumber, GameSize, Game.GID
 from Game join Participation on (Participation.GID = Game.GID) group by Game.GID;
 
@@ -122,7 +121,7 @@ where GameSize = 3 and GID in (
                 from Game join Participation on (Participation.GID = Game.GID) group by Game.GID
         ) x
         where x.BotNumber = 2 
-);*/
+);
             
 
 

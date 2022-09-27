@@ -1,0 +1,1 @@
+{"PointsDistributed":[48,2,2,2,2],"GameOrder":[7,12,8,0,14],"Guesser":7,"Board":[["7","0","24,14,0","#FFFFFF","me@me.com"],["12","0","7,23,0","#FFFF00","check@check.com"],["0","0","0,16,0","#FF0000","Bot"],["8","0","5,0,0","#EE82EE","loko@art.uk"],["14","0","18,0,0","#0000FF","opera"]],"HiddenCards":[1,12,29],"Won":false,"GuessedCards":[1,11,21]}

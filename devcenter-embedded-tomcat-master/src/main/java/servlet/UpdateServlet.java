@@ -26,7 +26,7 @@ public class UpdateServlet extends HttpServlet {
             int AID = (int) req.getSession().getAttribute("AID");
 
             File myObj = new File("src/main/java/Database/GameUpdateFiles/" +GID+ "," +AID+ ".txt");
-            Scanner myReader = new Scanner(myObj);
+
 
             //Gets Last modified Timestamp
             long timestamp = myObj.lastModified();
@@ -41,6 +41,7 @@ public class UpdateServlet extends HttpServlet {
                 //Don't send data
                 resp.getWriter().write("{}");
             }else{
+                Scanner myReader = new Scanner(myObj);
                 //Update Timestamp
                 req.getSession().setAttribute("DataTimeStamp",timestamp);
 
@@ -49,8 +50,8 @@ public class UpdateServlet extends HttpServlet {
 
                 //Send Data
                 resp.getWriter().write(data);
+                myReader.close();
             }
-            myReader.close();
         }catch(FileNotFoundException | NullPointerException | NoSuchElementException ignore){}
     }
 

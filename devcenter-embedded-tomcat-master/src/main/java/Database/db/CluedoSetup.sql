@@ -29,8 +29,7 @@ CardName varchar(20)
 );
 
 insert into Cards("CID","CardName") values (0,"");
-insert into Cards("CardName") values
-("Col. Mustard"),--1
+insert into Cards("CardName") values ("Col. Mustard"),--1
 ("Prof. Violet"),
 ("Dr. Green"),
 ("Mrs Peacock"),

@@ -354,10 +354,12 @@
             roworcol = 1;
         }
         for(var i=0;i<otherEntrances.length;i++){
-            if(((otherEntrances[i][roworcol] - currentLocation[roworcol]) < difference) && ((otherEntrances[i][roworcol] - currentLocation[roworcol]) >0) && !smallestBoolean){
+            if(((otherEntrances[i][roworcol] - currentLocation[roworcol]) < difference)
+                    && ((otherEntrances[i][roworcol] - currentLocation[roworcol]) >0) && !smallestBoolean){
                 difference = otherEntrances[i][roworcol] - currentLocation[roworcol];
                 leastExtremeIndex = i;
-            }else if(((currentLocation[roworcol] - otherEntrances[i][roworcol]) < difference) && ((currentLocation[roworcol] - otherEntrances[i][roworcol]) >0) && smallestBoolean){
+            }else if(((currentLocation[roworcol] - otherEntrances[i][roworcol]) < difference)
+                    && ((currentLocation[roworcol] - otherEntrances[i][roworcol]) >0) && smallestBoolean){
                 difference = currentLocation[roworcol] - otherEntrances[i][roworcol];
                 leastExtremeIndex = i;
             }
@@ -409,7 +411,6 @@
 
 
     //Pop-up that Shows Game Scores
-    //TDL
     function drawEndGame(){
         var Container = document.getElementById("dialog-container");
         Container.style.display = "block";
@@ -672,7 +673,8 @@
         if(Action[0]==0){
             String = '<span style="color: '+Colour+'; font-weight:bold;">'+PlayerName+'</span> started their Turn';
         }else if(Action[0]==1){
-            String = '<span style="color: '+Colour+'; font-weight:bold;">'+PlayerName+'</span> rolled '+Action[2]+' and '+Action[3];
+            String = '<span style="color: '+Colour+'; font-weight:bold;">'+PlayerName+'</span> rolled '+Action[2]+
+                ' and '+Action[3];
         }else if(Action[0]==3){
             var tempString="";
             if(Action[2]==0){
@@ -680,7 +682,8 @@
             }else{
                 tempString = "into";
             }
-            String = '<span style="color: '+Colour+'; font-weight:bold;">'+PlayerName+'</span> moved '+tempString+' the '+AllCards[Action[3]-1];
+            String = '<span style="color: '+Colour+'; font-weight:bold;">'+PlayerName+'</span> moved '+tempString+
+                ' the '+AllCards[Action[3]-1];
         }else if(Action[0]==4){
             var SecondAID = AIDtoPlayerNameAndColour(Action[5]);
             var PlayerName2 = SecondAID[0];
@@ -779,11 +782,13 @@
         //Check sent data has a Game Property
         if(data.hasOwnProperty('Game')){
             //If posx&y are in valid positions for the type of Game
-            if(data.Game.Type == "Normal Game" && posx <= 708 && posx >= 676 && posy<=467 && posy>=97 &&!(posy<=209 && posy>=194) &&!(posy<=323 && posy>=308)){
+            if(data.Game.Type == "Normal Game" && posx <= 708 && posx >= 676 && posy<=467 && posy>=97
+                    &&!(posy<=209 && posy>=194) &&!(posy<=323 && posy>=308)){
                 var correctposx = 685.0;
                 var fromtopy = posy - 98.0;
                 canvas_logic_checkmark(ctx,correctposx,fromtopy);
-            }else if (data.Game.Type == "Big Game" && posx<=735 && posx>=708 && posy<=660 && posy>=99 &&!(posy<=453 && posy>=437) &&!(posy<=275 && posy>=260)){
+            }else if (data.Game.Type == "Big Game" && posx<=735 && posx>=708 && posy<=660 && posy>=99
+                    &&!(posy<=453 && posy>=437) &&!(posy<=275 && posy>=260)){
                 var correctposx = 715.0;
                 var fromtopy = posy - 100.0;
                 canvas_logic_checkmark(ctx,correctposx,fromtopy);
