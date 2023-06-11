@@ -1,0 +1,13 @@
+set up gitignore
+Learn Maven + clean up mess outside directory
+JSON Fix
+restructure inner directories
+Figure out database table change(s) -> redo db methods
+use prepared stsaments everywhere
+Implement interface? split up servlets correctly at least
+Model controller Structure for db
+use js framework for frontend 
+Clean up all code
+get someone knowledgable to gice tips
+Launch using aws or azure
+Redo README properly

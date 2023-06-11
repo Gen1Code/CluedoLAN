@@ -1,14 +1,9 @@
-Don't copy this Project and pass it off as your own, no selling or any kind of illegal stuff.  
-Some code has been taken from other people including Stack Overflow and Github, 99.9% of it has been adapted to fit my needs.  
-Card Pictures are either taken from google images, which have Creative Commons Liciense or generated for personal use, the main board image is taken from someone else (sorry I forgot source).  
-The code for this project was more about showing complexity and being creative than about consistent concise code, most of it is commented with easy stuff being left uncommented, sorry about that.  
-
 This program allows people to play Cluedo across a LAN, one computer runs this program (use IntelliJ, I have no clue how to make it work for other IDEs) and it is available across the LAN, hosted on port 8080,
 For hosting computer '127.0.0.1:8080' connects to the server.  
 For other computers to connect, open command prompt and type in 'ipconfig /all' in the hosting computer to find the correct ipv4 address
 (it should be under either Wireless LAN adapter Wifi or Ethernet "" ""),
-Other computers enter ip:8080 as the url (for most web browsers, some are special look it up its quite easy) (dont use old internet explorer please, some JS stuff doesnt work).  
-One computer can have several accounts open at once, just use different web browsers, e.g. Chrome and Microsoft Edge, might want to have monitiors seperating browsers though if you dont wanna see each others cards.
+Other computers enter ip:8080 as the url (for most web browsers, some are special look it up its quite easy) (dont use old internet explorer please, some JS stuff doesn't work).  
+One computer can have several accounts open at once, just use different web browsers, e.g. Chrome and Microsoft Edge, might want to have monitors seperating browsers though if you dont wanna see each others cards.
 This makes this a multiplayer Cluedo implementation (obviously you can play solo vs the computer)
 
 ![image](https://user-images.githubusercontent.com/72555054/158430117-794fefd5-ebcf-4dda-8e1b-a05112af2531.png)
@@ -35,6 +30,9 @@ Most refreshes of pages won't disturb the play, but not exhaustively tested
 Any bugs found then please notify me, I'd like to fix them myself   :)     
 (work out how to notify me yourself ;)
 
+
+Card Pictures are either taken from google images, which have Creative Commons License or generated for personal use, the main board image is taken from someone else (sorry I forgot source).  
+The code for this project was more about showing complexity and being creative than about consistent concise code, most of it is commented with easy stuff being left uncommented, sorry about that.  
 
 Possible Project Not Running Fixes:  
 Mark sqlite-jdbc & json-simple as Libraries  
